@@ -5,7 +5,8 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 Schema::table('posts', function (Blueprint $table) {
-    $table->timestamp('published')->nullable()->change();
+    //$table->timestamp('published')->nullable()->change();
+    $table->dropColumn('published_at');
 });
 
 return new class extends Migration
